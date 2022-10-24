@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_dragonshield.mk
+    $(LOCAL_DIR)/twrp_dragonshield.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_dragonshield-user \
-    omni_dragonshield-userdebug \
-    omni_dragonshield-eng
+    twrp_dragonshield-user \
+    twrp_dragonshield-userdebug \
+    twrp_dragonshield-eng

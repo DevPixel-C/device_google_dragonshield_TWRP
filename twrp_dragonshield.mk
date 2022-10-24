@@ -9,14 +9,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Inherit some common twrp stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from dragonshield device
 $(call inherit-product, device/google/dragonshield/device.mk)
 
 PRODUCT_DEVICE := dragonshield
-PRODUCT_NAME := omni_dragonshield
+PRODUCT_NAME := twrp_dragonshield
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Pixel C
 PRODUCT_MANUFACTURER := google
