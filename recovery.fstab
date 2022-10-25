@@ -5,7 +5,7 @@
 
 # device                             mountpoint    fs       options         flags?    (fstab    version    2)
 ### --------------------------------------------------------------------------------------------------------------------------------------------- ###
-/dev/block/by-name/APP               /              ext4      defaults                                                        display="System",backup=1,flashimg=1,wipeingui,wait,check,formattable
+/dev/block/by-name/APP               /system_root   ext4      defaults                                                        display="System",backup=1,flashimg=1,wipeingui,wait,check,formattable
 /dev/block/by-name/APP               /system_image  emmc      defaults                                                        display="System_Image",backup=1,flashimg=1,wait
 /dev/block/by-name/vendor            /vendor        ext4      defaults                                                        display="Vendor",backup=1,flashimg=1,wipeingui,wait,check,formattable
 /dev/block/by-name/vendor            /vendor_image  emmc      defaults                                                        display="Vendor_Image",backup=1,flashimg=1,wait
