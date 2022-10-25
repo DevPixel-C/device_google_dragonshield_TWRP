@@ -5,18 +5,19 @@
 
 # device                             mountpoint    fs       options         flags?    (fstab    version    2)
 ### --------------------------------------------------------------------------------------------------------------------------------------------- ###
-/dev/block/by-name/APP               /            ext4      defaults         display="System",backup=1,flashimg=1,wipeingui,wait,check,formattable
-/dev/block/bootdevice/by-name/APP    /            emmc      defaults         display="System_Image",backup=1,flashimg=1
-/dev/block/by-name/CAC               /cache       ext4      defaults         display="Cache",backup=1,flashimg=1,wipeingui,wait,check,formattable
-/dev/block/by-name/vendor            /vendor      ext4      defaults         display="Vendor",backup=1,flashimg=1,wipeingui,wait,check,formattable
-/dev/block/by-name/LNX               /boot        emmc      defaults         display="Boot",backup=1,flashimg=1
-/dev/block/by-name/MSC               /misc        emmc      defaults         display="Misc",backup=1,flashimg=1,wipeingui
-/dev/block/by-name/UDA               /data        ext4      defaults         display="Userdata-ext4",backup=1,flashimg=1,wipeingui,formattable
-/dev/block/by-name/USP               /staging     emmc      defaults         display="Staging",backup=1,flashimg=1
-/dev/block/by-name/SOS               /recovery    emmc      defaults         display="Recovery",backup=1,flashimg=1
-/dev/block/by-name/BMP               /bmps        emmc      defaults         display="Logo",backup=1,flashimg=1
-/devices/sdhci-tegra.0/mmc_host*     auto         auto      defaults         display="Auto",backup=1,flashimg=1
-/dev/block/sda1                      /usb-otg     auto      defaults         display="USB-OTG",removable,storage
+/dev/block/by-name/APP               /              ext4      defaults                                                        display="System",backup=1,flashimg=1,wipeingui,wait,check,formattable
+/dev/block/by-name/APP               /system_image  emmc      defaults                                                        display="System_Image",backup=1,flashimg=1,wait
+/dev/block/by-name/vendor            /vendor        ext4      defaults                                                        display="Vendor",backup=1,flashimg=1,wipeingui,wait,check,formattable
+/dev/block/by-name/vendor            /vendor_image  emmc      defaults                                                        display="Vendor_Image",backup=1,flashimg=1,wait
+/dev/block/by-name/CAC               /cache         ext4      noatime,nosuid,nodev,data=ordered,nodelalloc,errors=panic       display="Cache",backup=1,flashimg=1,wipeingui,wait,check,formattable
+/dev/block/by-name/LNX               /boot          emmc      defaults                                                        display="Boot",backup=1,flashimg=1
+/dev/block/by-name/MSC               /misc          emmc      defaults                                                        display="Misc",backup=1,flashimg=1,wipeingui
+/dev/block/by-name/UDA               /data          ext4      noatime,nosuid,nodev,data=ordered,noauto_da_alloc,errors=panic  display="Userdata-ext4",backup=1,flashimg=1,wipeingui,wait,check,formattable,encryptable=/dev/block/by-name/MDA
+/dev/block/by-name/USP               /staging       emmc      defaults                                                        display="Staging",backup=1,flashimg=1
+/dev/block/by-name/SOS               /recovery      emmc      defaults                                                        display="Recovery",backup=1,flashimg=1
+/dev/block/by-name/BMP               /bmps          emmc      defaults                                                        display="Logo",backup=1,flashimg=1
+/devices/sdhci-tegra.0/mmc_host*     auto           auto      defaults                                                        display="Auto",backup=1,flashimg=1,voldmanaged=sdcard1:auto,encryptable=userdata,wipeingui
+/dev/block/sda1                      /usb-otg       auto      defaults                                                        display="USB-OTG",removable,storage
 
 ### --------------------------------------------------------------------------------------------------------------------------------------------- ###
 ###                                                      NOT USED!!                                                                               ###
