@@ -1,0 +1,97 @@
+[eliminater74@PureFusion:dragonshield]$ fastboot getvar all
+(bootloader) version: 0.3
+(bootloader) version-bootloader: Google_Smaug.7900.139.0
+(bootloader) version-baseband: N/A
+(bootloader) product: dragon
+(bootloader) secure: no
+(bootloader) max-download-size: 0x10000000
+(bootloader) partition-type:boot: ext4
+(bootloader) partition-type:kernel-a: ext4
+(bootloader) partition-type:kernel-b: ext4
+(bootloader) partition-type:recovery: ext4
+(bootloader) partition-type:kernel: ext4
+(bootloader) partition-type:system: ext4
+(bootloader) partition-type:system-a: ext4
+(bootloader) partition-type:vendor: ext4
+(bootloader) partition-type:vendor-a: ext4
+(bootloader) partition-type:cache: ext4
+(bootloader) partition-type:data: ext4
+(bootloader) partition-type:userdata: ext4
+(bootloader) partition-type:metadata: ext4
+(bootloader) partition-type:lnx: ext4
+(bootloader) partition-type:misc: ext4
+(bootloader) partition-type:persistent: ext4
+(bootloader) partition-type:system-b: ext4
+(bootloader) partition-type:vendor-b: ext4
+(bootloader) partition-size:boot: 0x2000000
+(bootloader) partition-size:kernel-a: 0x2000000
+(bootloader) partition-size:kernel-b: 0x2000000
+(bootloader) partition-size:recovery: 0x2000000
+(bootloader) partition-size:kernel: 0x2000000
+(bootloader) partition-size:system: 0xe0000000
+(bootloader) partition-size:system-a: 0xe0000000
+(bootloader) partition-size:vendor: 0x13000000
+(bootloader) partition-size:vendor-a: 0x13000000
+(bootloader) partition-size:cache: 0x19000000
+(bootloader) partition-size:data: 0xd76b00000
+(bootloader) partition-size:userdata: 0xd76b00000
+(bootloader) partition-size:metadata: 0x4000000
+(bootloader) partition-size:lnx: 0x2000000
+(bootloader) partition-size:misc: 0x400000
+(bootloader) partition-size:persistent: 0x80000
+(bootloader) partition-size:chromeos: 0xe8f800000
+(bootloader) partition-size:mbr: 0x200
+(bootloader) partition-size:gpt: 0x4200
+(bootloader) partition-size:RO_SECTION: 0x3f0000
+(bootloader) partition-size:RO_VPD: 0x10000
+(bootloader) partition-size:RW_SECTION_A: 0x580000
+(bootloader) partition-size:RW_SECTION_B: 0x580000
+(bootloader) partition-size:bootloader: 0x1000000
+(bootloader) unlocked: yes
+(bootloader) off-mode-charge: 1
+(bootloader) battery-voltage: 4150 mV
+(bootloader) variant: 
+(bootloader) battery-soc-ok: yes
+(bootloader) Bdev-size:mmc: 62537072640
+(bootloader) Bdev-size:flash: 16777216
+(bootloader) Gbb-flags: 0x0
+(bootloader) Oem-version:RO: Google_Smaug.7132.226.0
+(bootloader) Oem-version:RW_A: Google_Smaug.7900.139.0
+(bootloader) Oem-version:RW_B: Google_Smaug.7900.139.0
+all: Done!
+Finished. Total time: 0.269s
+
+drwxr-xr-x 2 root root 340 2022-10-25 11:29 .
+drwxr-xr-x 5 root root 580 2022-10-25 11:29 ..
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 APP -> /dev/block/mmcblk0p4
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 CAC -> /dev/block/mmcblk0p6
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 KERN-A -> /dev/block/mmcblk0p1
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 KERN-B -> /dev/block/mmcblk0p2
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 LNX -> /dev/block/mmcblk0p9
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 MD1 -> /dev/block/mmcblk0p8
+lrwxrwxrwx 1 root root  21 2022-10-25 11:29 MSC -> /dev/block/mmcblk0p10
+lrwxrwxrwx 1 root root  21 2022-10-25 11:29 PST -> /dev/block/mmcblk0p11
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 UDA -> /dev/block/mmcblk0p7
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 VNR -> /dev/block/mmcblk0p5
+lrwxrwxrwx 1 root root  18 2022-10-25 11:29 mmcblk0 -> /dev/block/mmcblk0
+lrwxrwxrwx 1 root root  23 2022-10-25 11:29 mmcblk0boot0 -> /dev/block/mmcblk0boot0
+lrwxrwxrwx 1 root root  23 2022-10-25 11:29 mmcblk0boot1 -> /dev/block/mmcblk0boot1
+lrwxrwxrwx 1 root root  22 2022-10-25 11:29 mmcblk0rpmb -> /dev/block/mmcblk0rpmb
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 recovery -> /dev/block/mmcblk0p3
+
+drwxr-xr-x 2 root root 260 2022-10-25 11:29 .
+drwxr-xr-x 3 root root 360 2022-10-25 11:29 ..
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 APP -> /dev/block/mmcblk0p4
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 CAC -> /dev/block/mmcblk0p6
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 KERN-A -> /dev/block/mmcblk0p1
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 KERN-B -> /dev/block/mmcblk0p2
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 LNX -> /dev/block/mmcblk0p9
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 MD1 -> /dev/block/mmcblk0p8
+lrwxrwxrwx 1 root root  21 2022-10-25 11:29 MSC -> /dev/block/mmcblk0p10
+lrwxrwxrwx 1 root root  21 2022-10-25 11:29 PST -> /dev/block/mmcblk0p11
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 UDA -> /dev/block/mmcblk0p7
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 VNR -> /dev/block/mmcblk0p5
+lrwxrwxrwx 1 root root  20 2022-10-25 11:29 recovery -> /dev/block/mmcblk0p3
+
+
+
