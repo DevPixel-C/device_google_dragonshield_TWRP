@@ -1,10 +1,33 @@
-/             ext4     /dev/block/by-name/APP               flags=display=
-/cache        ext4     /dev/block/by-name/CAC               flags=display=cache
-/vendor       ext4     /dev/block/by-name/vendor            flags=display=vendor
-/boot         emmc     /dev/block/by-name/LNX               flags=display=boot
-/misc         emmc     /dev/block/by-name/MSC               flags=display=misc
-/data         ext4     /dev/block/by-name/UDA               flags=display=data
-/staging      emmc     /dev/block/by-name/USP               flags=display=staging
-/recovery     emmc     /dev/block/by-name/SOS               flags=display=recovery
-/bmps         emmc     /dev/block/by-name/BMP               flags=display=bmps
-auto          auto     /devices/sdhci-tegra.0/mmc_host*     flags=display=auto
+# Android fstab file.
+#<src>                                                  <mnt_point>         <type>    <mnt_flags and options>                       <fs_mgr_flags>
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+# device                             mountpoint    fs       options         flags?    (fstab    version    2)
+### --------------------------------------------------------------------------------------------------------------------------------------------- ###
+/dev/block/by-name/APP               /            ext4      defaults         display="System",backup=1,flashimg=1,wipeingui,wait,check,formattable
+/dev/block/bootdevice/by-name/APP    /            emmc      defaults         display="System_Image",backup=1,flashimg=1
+/dev/block/by-name/CAC               /cache       ext4      defaults         display="Cache",backup=1,flashimg=1,wipeingui,wait,check,formattable
+/dev/block/by-name/vendor            /vendor      ext4      defaults         display="Vendor",backup=1,flashimg=1,wipeingui,wait,check,formattable
+/dev/block/by-name/LNX               /boot        emmc      defaults         display="Boot",backup=1,flashimg=1
+/dev/block/by-name/MSC               /misc        emmc      defaults         display="Misc",backup=1,flashimg=1,wipeingui
+/dev/block/by-name/UDA               /data        ext4      defaults         display="Userdata-ext4",backup=1,flashimg=1,wipeingui,formattable
+/dev/block/by-name/USP               /staging     emmc      defaults         display="Staging",backup=1,flashimg=1
+/dev/block/by-name/SOS               /recovery    emmc      defaults         display="Recovery",backup=1,flashimg=1
+/dev/block/by-name/BMP               /bmps        emmc      defaults         display="Logo",backup=1,flashimg=1
+/devices/sdhci-tegra.0/mmc_host*     auto         auto      defaults         display="Auto",backup=1,flashimg=1
+/dev/block/sda1                      /usb-otg     auto      defaults         display="USB-OTG",removable,storage
+
+### --------------------------------------------------------------------------------------------------------------------------------------------- ###
+###                                                      NOT USED!!                                                                               ###
+### --------------------------------------------------------------------------------------------------------------------------------------------- ###
+#/             ext4     /dev/block/by-name/APP               flags=display=
+#/cache        ext4     /dev/block/by-name/CAC               flags=display=cache
+#/vendor       ext4     /dev/block/by-name/vendor            flags=display=vendor
+#/boot         emmc     /dev/block/by-name/LNX               flags=display=boot
+#/misc         emmc     /dev/block/by-name/MSC               flags=display=misc
+#/data         ext4     /dev/block/by-name/UDA               flags=display=data
+#/staging      emmc     /dev/block/by-name/USP               flags=display=staging
+#/recovery     emmc     /dev/block/by-name/SOS               flags=display=recovery
+#/bmps         emmc     /dev/block/by-name/BMP               flags=display=bmps
+#auto          auto     /devices/sdhci-tegra.0/mmc_host*     flags=display=auto
